@@ -1,0 +1,45 @@
+{% extends "client/lib/layout/base_simple.tpl.html" %}
+
+{% block config %}
+    {% include "client/widgets/pricing/config.tpl.js" %}
+{% endblock %}
+
+{% block styles %}
+    {% include "client/widgets/pricing/__gen/style.css" %} {# NOTE that we refer to compiled *.css, not *.scss #}
+{% endblock %}
+
+{% block body %}
+    <div class="x-widget container-fluid" >
+        <div class="row">
+            <div class="col-xs-12"><h3>These widget displays first N products fetched upon criteria</h3></div>
+        </div>
+        <div class="row"><div class="col-xs-4">
+            <div class="row no-print">
+                <div class="col-xs-12">
+                    <select class="select-category" placeholder="Product Category"></select>
+                    <select class="select-price-option" placeholder="Price option"></select>
+                    <select class="select-product" placeholder="Number to fetch"></select>
+                    <select multiple="multiple" class="select-outlined-rows" placeholder="Rows to Outline..." ></select>
+                </div>
+            </div>
+
+            {% if data.clientName == "A-client" %}
+                <div>Here is specific code for Client A</div>
+            {% else %}
+                <div>Here is specific code for Client B</div>
+            {% endif %}
+
+
+            </div></div>
+            <i id="template-spinner" class="fa fa-refresh fa-spin"></i>
+    </div>
+{% endblock %}
+
+{% block partials %}
+    {% include "client/widgets/pricing/partials.tpl.html" %}
+{% endblock %}
+
+{% block script %}
+    {% include "client/widgets/pricing/script.tpl.js" %}
+{% endblock %}
+

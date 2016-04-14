@@ -1,0 +1,97 @@
+@import "client/lib/styles/base";
+
+body {
+    font-family: Roboto, Arial, sans-serif !important;
+}
+@media print {
+    .x-widget, .x-widget * {
+      -webkit-print-color-adjust: exact;
+    }
+    .no-print {
+        display: none
+    }
+}
+
+.widget-component {
+    margin: 10px;
+}
+
+.x-widget .cell{
+    margin: 4px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.x-widget .cell div {
+    text-align: center;
+    font-weight: bold;
+}
+
+.x-widget .product{
+    background-color: #0070ff !important; /*!important needs to fix printing bug in the Chrome*/
+    height: 60px;
+    line-height: 60px;
+    font-size: 2.5em;
+}
+
+.x-widget .print-me{
+    background-color: #a9a9a9 !important;
+    height: 40px;
+    line-height: 50px;
+    border-radius: 10px;
+}
+
+.x-widget .item{
+    height: 60px;
+    line-height: 60px;
+}
+
+.x-widget .bigitem{
+    height: 80px;
+    line-height: 80px;
+}
+
+.x-widget .cell img {
+  height: 50px;
+  width: 50px;
+}
+
+.x-widget .cell span {
+  color: white !important;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.x-widget .cell span.text, .x-widget .fa {
+  color: white !important;
+}
+
+.x-widget .cell span.textBright {
+  color: red !important;
+}
+
+.x-widget .item.price {
+    background-color: #a9a9a9 !important;
+    font-size: 1.8em;
+}
+
+.x-widget .item.desc {
+    background-color: #0070ff !important;
+    font-size: 1em;
+}
+
+.x-widget .bigitem.price {
+    background-color: white !important;
+    color: red !important;
+    font-size: 3.5em;
+}
+
+.x-widget .bigitem.desc {
+    background-color: #0070ff !important;
+    font-size: 1.5em;
+}
+
+.x-widget .np {
+   padding: 0 !important;
+}

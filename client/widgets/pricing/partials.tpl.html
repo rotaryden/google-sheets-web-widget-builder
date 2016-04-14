@@ -1,0 +1,17 @@
+{# This HTML includes client-side Nunjucks templates, we need escape it from the build-time template processing (that also uses Nunjucks) #}
+{% raw %}
+    <script type="text/template" id="tpl-pricing">
+        <div class="widget-component">
+            <div class="row"><div class="cell product"><span class="text">{{product}}</span></div></div>
+            <!--<div class="row"><div class="cell product-desc">Some product description here?</div></div>-->
+            {% for i in items %}
+                <div class="row">
+                    <!-- <div class="np col-xs-4"><div class="cell {{  'big' if i.outline else '' }}item"><span class="text"><img src="{{i.img}}" alt=""/></span></div></div> -->
+                    <div class="np col-xs-7"><div class="cell {{  'big' if i.outline else '' }}item desc"><span class="text">{{i.desc}}</span></div></div>
+                    <div class="np col-xs-5"><div class="cell {{  'big' if i.outline else '' }}item price"><span class="text{{  'Bright' if i.outline else '' }}">${{i.price}}</span></div></div>
+                </div>
+            {% endfor %}
+            <div class="row"><div class="cell print-me no-print"><i class="fa fa-print fa-2x"></i></div></div>
+        </div>
+    </script>
+{% endraw %}

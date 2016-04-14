@@ -1,0 +1,27 @@
+{
+    "src": {
+        "fileId": "1EXDeMu3zGd-Iw5Y3G3THx4R_UatVBHk7nv8gnkXzzN6rH63vNvQ2KfKY",
+        "files": {
+            "Lib.common.js": {
+                "path": "./__build/common/Lib.common.js",
+                "type": "server_js"
+            },
+            "Config.server.js": {
+                "path": "./__build/server/Config.server.js",
+                "type": "server_js"
+            },
+            "Lib.server.js": {
+                "path": "./__build/server/Lib.server.js",
+                "type": "server_js"
+            },
+            "API.server.js": {
+                "path": "./__build/server/API.server.js",
+                "type": "server_js"
+            },
+            "Application.server.js": {
+                "path": "./__build/server/Application.server.js",
+                "type": "server_js"
+            }
+        }
+    }
+}

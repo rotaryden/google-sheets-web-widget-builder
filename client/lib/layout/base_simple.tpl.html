@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        {% block config %}
+        {% endblock %}
+    </script>
+    <meta charset="UTF-8">
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.min.css" rel="stylesheet" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.bootstrap3.min.css" rel="stylesheet" />
+    <!-- //rawgit.com/octopuscreative/FancySelect/master/fancySelect.css -->
+    <style>
+        {% block styles %}{% endblock %}
+    </style>
+</head>
+<body>
+
+{% block body %}{% endblock %}
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="//mozilla.github.io/nunjucks/files/nunjucks.js"></script>
+<!--<script src="//rawgit.com/altitudebreath/sheetrock-raw-data/master/src/sheetrock.js"></script> -->
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/async/1.4.2/async.min.js"></script>-->
+<script src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.10.0/lodash.min.js"></script>
+
+{% block partials %}{% endblock %}
+
+<script>
+    {% include "common/Lib.common.js" %}
+    {% include "client/lib/js/library.tpl.js" %}
+
+    var GlobalConfig = JSON.parse('{{ serializedData }}');
+
+    {% include "client/lib/js/global_init.js" %}
+
+    {% block script %}{% endblock %}
+</script>
+
+</body>
+</html>
