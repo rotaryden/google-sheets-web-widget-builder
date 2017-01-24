@@ -1,7 +1,5 @@
 # Web Widgets for Google Sheets: Builder
 
-###WARNING! work in progress, build works, but sample widget not yet. Docs to be updated. Coming soon !..
-
 This builder suite compiles 
 
 self-containing HTML Web Widgets able to dynamically 
